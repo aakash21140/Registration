@@ -1,0 +1,129 @@
+/* Container similar to form_two */
+.form_two {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #3f3fd4;
+  color: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Heading */
+.form_two h1 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Input container */
+.input-boxx {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs styling */
+.input-boxx input {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-bottom: 2px solid #b3b3ff;
+  padding: 12px 15px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 4px 4px 0 0;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.input-boxx input::placeholder {
+  color: #dcdcffcc;
+}
+
+/* Focus effect */
+.input-boxx input:focus {
+  border-bottom-color: #ffffff;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Error styling */
+.input-boxx input.error {
+  border-bottom-color: #ff4c4c !important;
+}
+
+.error-message {
+  color: #ff6666;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+/* Show error message */
+.input-boxx input.error + .error-message {
+  display: block;
+}
+
+/* Submit button */
+.register-badge {
+  background: #fff;
+  color: #3f3fd4;
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  margin-top: 10px;
+}
+
+
+.register-badge:hover {
+  background: #2f2fb3;
+  color: #fff;
+}
+
+/* Optional: center button */
+.register-badge {
+  align-self: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+
+/* Remember + Forgot row */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Remember me */
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* Forgot password link */
+.forgot-password {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+

@@ -1,0 +1,524 @@
+*{
+    box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html,body{
+    
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #9ec5f8, #8fa8ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+#main{
+   display: flex;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+#file{
+  cursor: pointer;
+  
+}
+.form_one{
+
+    border-bottom-left-radius: 2%;
+    border-top-left-radius: 2%;
+    /* margin-left: 10%;*/ 
+    background-color: white;
+    
+    /* width: 40%; */
+    height: 80%;
+}
+
+/* Proper side-by-side layout for name fields */
+.form_one .name {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.form_one .name .input-box {
+  width: 100%;
+}
+
+/* Make form content centered and consistent */
+.form_one form {
+  width: 92%;
+ 
+}
+
+.name {
+    display:flex;
+}
+.form_one input{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: #0a0a0a;
+}
+
+.file-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.file-box input[type="file"] {
+  flex: 1;
+}
+
+.file-name {
+  margin-left: 12px;
+  font-size: 13px;
+  color: #555;
+  white-space: nowrap;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.form_two {
+    border-bottom-right-radius: 2%;
+    border-top-right-radius: 2%;
+   
+    background: #3f3fd4;
+    color: #fff;
+    }
+
+.form_one h1,
+.form_two h1 {
+  margin-bottom: 40px;
+  font-size: 26px;
+}
+
+
+
+.form_one {
+  flex: 1;
+  padding: 60px 50px;   /* THIS is key */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form_two {
+  flex: 1;
+  padding: 60px 50px;   /* THIS is key */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+.form_two .name {
+  display: flex;
+  gap: 16px;
+}
+
+/* Equal width inputs in Contact Details */
+.form_two .input-boxx,
+.form_two .input-box2 {
+  width: 100%;
+}
+/* Prevent inputs from wrapping oddly */
+.form_two input,
+.form_two select {
+  box-sizing: border-box;
+}
+.form_two .forgot-box{
+   box-sizing: border-box;
+}
+
+.input-box{
+
+  width: 100%;
+  padding: 12px 4px;
+  margin-bottom: 24px;
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+  
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+    
+}
+
+
+input{
+    border:transparent;
+    border-bottom:2px solid rgb(71, 69, 69);
+}
+.input-box select{
+ 
+  padding: 15px 200px 12px 4px;
+  border: none;
+  
+  background: transparent;
+  font-size: 14px;
+  appearance: none;        /* removes default arrow */
+  outline: none;
+  cursor: pointer;
+}
+
+.input-box1 {
+  position: relative;
+  width: 100%;
+}
+
+.input-box1 select {
+  width: 100%;
+  padding: 14px 26px 12px 6px;
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+  background: transparent;
+  font-size: 14px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.input-box1 i {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 16px;
+  
+}
+
+
+.input-box select{
+ 
+  padding: 15px 20px 12px 4px;
+  border: none;
+  
+  background: transparent;
+  font-size: 14px;
+  appearance: none;        /* removes default arrow */
+  outline: none;
+  cursor: pointer;
+}
+
+
+.input-box2 {
+  position: relative;
+  width: 100%;
+}
+
+.input-box2 select {
+  width: 100%;
+  padding: 12px 26px 12px 6px;
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+  background: transparent;
+  font-size: 14px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.input-box2 i {
+  position: absolute;
+  right: 7px;
+  top: 35%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 16px;
+  
+}
+
+.input-box3 {
+  position: relative;
+  width: 100%;
+}
+
+.input-box3 select {
+  width: 100%;
+  padding: 14px 26px 12px 6px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+  background: transparent;
+  font-size: 14px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.input-box3 i {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 16px;
+  
+}
+
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #f0e8e8;
+  margin: 16px 0;
+  user-select: none;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  accent-color: #132bb3; /* modern colored checkbox */
+}
+
+.checkbox-container label a.terms-link {
+  color: #71b6d1;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.checkbox-container label a.terms-link:hover {
+  opacity: 0.2;
+}
+
+
+button{
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border-radius: 20px;
+    border: none;
+    background: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #2f2fb3; /* Or any highlight color */
+    color: #fff;
+    transform: scale(1.05); /* Slight zoom for interactivity */
+}
+
+
+#emp {
+    width: 100%;
+    padding: 8px 0;              /* no horizontal padding */
+    margin-bottom: 24px;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: transparent;
+    font-size: 14px;
+    color: #555;
+    outline: none;
+    display: flex;
+
+    /* 🔥 THIS is the important part */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    box-sizing: border-box;
+}
+
+
+
+
+#emp:focus {
+    border-bottom: 2px solid #3f51b5; /* active blue line like image */
+}
+
+#name{
+  width: 55%;
+  padding: 12px 4px;
+ 
+  border: none;
+  
+  
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+}
+
+
+
+
+
+.input-boxx input{
+    width: 100%;
+  padding: 12px 4px;
+  margin-bottom: 24px;
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+  
+  background: transparent;
+  font-size: 14px;
+  outline: none;}
+
+  
+.forgot-box input {
+  width: 100%;
+  padding: 12px 4px;
+  margin-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+  
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+}
+
+
+input, select {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input.error, select.error {
+  border-bottom: 2px solid red !important;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+
+input.error,
+select.error {
+  border-bottom: 2px solid red !important;
+}
+
+.auth-link {
+  text-align: center;
+  
+}
+
+.auth-link a {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.auth-link a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+
+/* i butoon */
+
+/* Password wrapper */
+.password-box {
+  position: relative;
+}
+
+/* Info icon */
+.info-icon {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #3f3fd4;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Tooltip container */
+.password-rules {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  width: 220px;
+  background: #ffffff;
+  color: #333;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* Show tooltip on hover */
+.info-icon:hover .password-rules {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* List styling */
+.password-rules ul {
+  padding-left: 16px;
+  margin: 0;
+}
+
+.password-rules li {
+  margin-bottom: 6px;
+}
+
+
+/*Image Preview  */
+.file-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#filePreview {
+  max-width: 150px;   /* Adjust as needed */
+  max-height: 150px;
+  border-radius: 6px;
+  object-fit: cover;
+  display: none;      /* Hidden by default */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Calender Preview */
+.date-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#dateDisplay {
+  font-size: 14px;
+  color: #333;
+  background: #f0f0f0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  min-width: 120px;
+  text-align: center;
+}
