@@ -9,7 +9,6 @@
     <cfparam name="form.first_name" default="">
     <cfparam name="form.last_name" default="">
     <cfparam name="form.Password" default="">
-    
     <cfparam name="emailError" default="">
     <cfparam name="successMessage" default="">
     <cfparam name="imagePath" default="">

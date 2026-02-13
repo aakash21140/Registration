@@ -1,3 +1,8 @@
+<cfparam name="form.Email" default="">
+<cfparam name="emailError" default="">
+<cfparam name="successMessage" default="">
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +30,30 @@
         yearLabel.style.color = "#333";
     }
     }
-  </script>
+  
+    async function checkEmail(email) {
+        try {
+            const response = await fetch("checkEmail.cfm", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: "Email=" + encodeURIComponent(email)
+            });
+
+            const data = await response.json();
+           
+            return data.exists;
+
+        } catch (err) {
+            console.error("Error checking email:", err);
+            return false;
+        }
+    }
+
+
+</script>
+
 
 </head>
 <body>
@@ -120,9 +148,19 @@
       
 
       <div class="input-boxx">
-        <input type="text" name="Email" id="Email" placeholder="Your Email">
-        <span class="error-message"></span>
-      </div>
+  <input type="text" 
+         name="Email" 
+         id="Email" 
+         placeholder="Your Email"
+         value="<cfoutput>#structKeyExists(form,'Email') ? form.Email : ''#</cfoutput>">
+
+  <span class="error-message">
+    <cfif isDefined("emailError")>
+      <cfoutput>#emailError#</cfoutput>
+    </cfif>
+  </span>
+</div>
+
 
       <div class="input-boxx password-box">
         <input type="confirm password" name="Password" placeholder="Your Password">

@@ -1,7 +1,8 @@
 
 
 
-document.getElementById("registrationForm").addEventListener("submit", function (e) {
+document.getElementById("registrationForm").addEventListener("submit", async function (e) {
+     e.preventDefault();
     let valid = true;
 
     // Clear previous errors
@@ -91,6 +92,14 @@ if (!form.Email.value.trim()) {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.Email.value.trim())) {
         setError(form.Email, "Invalid email format");
     }
+
+    // AJAX Email Check
+if (form.Email.value.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.Email.value.trim())) {
+    const emailExists = await checkEmail(form.Email.value.trim());
+    console.log(emailExists)
+    if (emailExists) setError(form.Email, "Email is already registered");
+}
+
 
     // PHONE is optional — validate only if filled
     if (form.Number.value.trim()) {
