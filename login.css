@@ -1,129 +1,135 @@
-/* Container similar to form_two */
-.form_two {
-  max-width: 400px;
-  margin: 40px auto;
-  background: #3f3fd4;
-  color: white;
-  padding: 40px 30px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  font-family: "Inter", sans-serif;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Heading */
-.form_two h1 {
-  margin-bottom: 30px;
-  font-size: 28px;
-  font-weight: 700;
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #9ec5f8, #8fa8ff);
+}
+
+/* Form container */
+form {
+  background: #3f3fd4;
+  padding: 50px 40px;
+  border-radius: 12px;
+  width: 360px;  /* fixed width for consistent layout */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Form title */
+h1 {
   text-align: center;
+  margin-bottom: 30px;
+  color: #ececf1;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 /* Input container */
 .input-boxx {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #dcdcdc;
 }
 
-/* Inputs styling */
+/* Input fields */
 .input-boxx input {
-  background: rgba(255, 255, 255, 0.15);
-  border: none;
-  border-bottom: 2px solid #b3b3ff;
-  padding: 12px 15px;
-  font-size: 16px;
+  border: none;      /* removes the visible border */
+  outline: none;     /* removes the focus outline */
+  box-shadow: none;  /* just in case any shadow is set */
+  background-color: #3f3fd4;
   color: #fff;
-  border-radius: 4px 4px 0 0;
-  transition: border-color 0.3s ease;
-  outline: none;
-}
-
-.input-boxx input::placeholder {
-  color: #dcdcffcc;
-}
-
-/* Focus effect */
-.input-boxx input:focus {
-  border-bottom-color: #ffffff;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-/* Error styling */
-.input-boxx input.error {
-  border-bottom-color: #ff4c4c !important;
-}
-
-.error-message {
-  color: #ff6666;
-  font-size: 12px;
-  margin-top: 5px;
-  display: none;
-}
-
-/* Show error message */
-.input-boxx input.error + .error-message {
-  display: block;
-}
-
-/* Submit button */
-.register-badge {
-  background: #fff;
-  color: #3f3fd4;
-  font-weight: 700;
-  border: none;
-  border-radius: 25px;
-  padding: 12px;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-  margin-top: 10px;
-}
-
-
-.register-badge:hover {
-  background: #2f2fb3;
-  color: #fff;
-}
-
-/* Optional: center button */
-.register-badge {
-  align-self: center;
+  padding: 12px 10px;
+  border-radius: 6px;
+  font-size: 14px;
   width: 100%;
-  max-width: 300px;
 }
 
 
-/* Remember + Forgot row */
+.input-boxx input:focus {
+  border-color: #ececf1;
+  background-color: #4a4adf;
+  border-bottom-color: #ffffff;
+}
+
+
+
+/* Error messages */
+.error-message {
+  color: #ff6b6b;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+  position: relative;
+}
+
+/* Login options (remember + forgot) */
 .login-options {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
-  margin-top: 5px;
+  font-size: 12px;
+  margin-bottom: 24px;
 }
 
-/* Remember me */
-.remember-me {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
+.login-options .remember-me input {
+  margin-right: 6px;
 }
 
 /* Forgot password link */
 .forgot-password {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
+  color: #71b6d1;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 .forgot-password:hover {
-  text-decoration: underline;
+  opacity: 0.8;
 }
 
+/* Submit button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #ececf1;
+  color: #070707;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
+button:hover {
+  background-color: #2f2fb3;
+  color: #fff;
+  transform: scale(1.05);
+}
 
+/* Auth link under form */
+.auth-link {
+  text-align: center;
+  margin-top: 16px;
+}
 
+.auth-link a {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
 
-
+.auth-link a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}

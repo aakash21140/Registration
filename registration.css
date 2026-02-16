@@ -131,10 +131,17 @@ html,body{
   width: 100%;
 }
 /* Prevent inputs from wrapping oddly */
-.form_two input,
+
 .form_two select {
   box-sizing: border-box;
+ 
+}       
+
+.form_two input{
+   border-bottom: none;
+   background-color: #3f3fd4;
 }
+
 .form_two .forgot-box{
    box-sizing: border-box;
 }
@@ -358,14 +365,14 @@ button:hover {
 
 
 
-.input-boxx input{
+.input-boxx {
     width: 100%;
   padding: 12px 4px;
   margin-bottom: 24px;
   border: none;
   border-bottom: 1px solid #dcdcdc;
   
-  background: transparent;
+  background: #3f3fd4;
   font-size: 14px;
   outline: none;}
 
@@ -397,7 +404,7 @@ input.error, select.error {
 .error-message {
   color: red;
   font-size: 12px;
-  margin-top: 4px;
+  
   display: none;
 }
 
@@ -513,7 +520,7 @@ select.error {
   gap: 20px;
 }
 
-#dateDisplay {
+#age {
   font-size: 14px;
   color: #333;
   background: #f0f0f0;

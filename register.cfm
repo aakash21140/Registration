@@ -1,10 +1,6 @@
 
-<cfdump var="empty">
 
-
-<cfdump var="empty11">
-<cfif structKeyExists(form, "submit") AND structKeyExists(form, "terms")>
-     
+<cfif structKeyExists(form, "terms")>
     <cfparam name="form.Email" default="">
     <cfparam name="form.first_name" default="">
     <cfparam name="form.last_name" default="">
@@ -33,14 +29,14 @@
         </cfquery>
 
 
-        <cfdump var="boxing">
+        
         <!--- Email already exists --->
         <cfset emailError = "Email is already registered">
 
-        <cfdump var="#form.Password#">
+        
         <!--- Your existing upload + insert code here --->
         <cfset hashedPassword = hash(form.Password, "SHA-256")>
-        <cfdump var="mma">
+        
 
        <cfquery datasource="registrationDS">
         INSERT INTO users (
